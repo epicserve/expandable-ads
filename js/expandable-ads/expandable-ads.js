@@ -1,7 +1,7 @@
 /*!
  * Expandable Ads
  *
- * Version: v0.1.2
+ * Version: v0.1.3
  * Author: Brent O'Connor (www.epicserve.com)
  * Requirements: jQuery v1.7.2 or greater
  *
@@ -63,7 +63,7 @@ var expandable_ad = function($) {
 
     return {
 
-        version: 'v0.1.2',
+        version: 'v0.1.3',
         public_property: null,
         mouse_is_over_sm_ad: false,
         mouse_is_over_lg_ad: false,
