@@ -5,33 +5,6 @@
  * Author: Brent O'Connor (www.epicserve.com)
  * Requirements: jQuery v1.7.2 or greater
  *
- * Example Usage::
- *     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
- *     <script type="text/javascript" src="http://media.example.com/js/expandable-ad/expandable-ad.min.js"></script>
- *     <script>
- *     var slide_down_ad_1 = expandable_ad(jQuery);
- *     slide_down_ad.init({
- *         ad_id_slug: 'slide-down-ad-1',
- *         small_ad_swf_url: 'http://media.example.com/ads/slide-down-ad-1/ad_960x66.swf',
- *         large_ad_swf_url: 'http://media.example.com/ads/slide-down-ad-1/ad_960x500.swf',
- *         click_thru_url: 'http://www.example.com/'
- *     });
- *     </script>
- *
- * DFP Example Usage::
- *     // Ad the following code in DFP as a third party javascript
- *     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
- *     <script type="text/javascript" src="http://media.example.com/js/expandable-ad/expandable-ad.min.js"></script>
- *     <script>
- *     var slide_down_ad_1 = expandable_ad(jQuery);
- *     slide_down_ad.init({
- *         ad_id_slug: 'slide-down-ad-1',
- *         small_ad_swf_url: 'http://media.example.com/ads/slide-down-ad-1/ad_960x66.swf',
- *         large_ad_swf_url: 'http://media.example.com/ads/slide-down-ad-1/ad_960x500.swf',
- *         click_thru_url: '%%CLICK_URL_UNESC%%http://www.example.com/'
- *     });
- *     </script>
- *
  */
 
 // The following makes it possible to make array values unique
