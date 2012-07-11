@@ -1,14 +1,13 @@
 Expandable Ads
 ==============
 
-Expandable ads is an example of how to create ads that expand by either sliding down or sliding from right to left. You can display the ads for using any ad network (i.e. [Google DFP][DFP]) that allows third party Javascript.
+Expandable ads is an example of how to create ads that expand by either sliding down or sliding from right to left. You can display the ads using any ad network (i.e. [Google DFP][DFP]) that allows third party Javascript.
 
 [DFP]: http://www.google.com/dfp/
 
 Example Usage
 -------------
 -------------
-
 
 
 ### Javascript Example for Testing
