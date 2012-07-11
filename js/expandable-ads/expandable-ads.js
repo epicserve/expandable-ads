@@ -147,7 +147,7 @@ var expandable_ad = function($) {
             if (o['expand_effect'] === 'slideLeft')  {
                 lg_pos = 'top: 0px; right: 0px;';
             }
-            document.write('<div id="' + o['large_ad_wrap_id'] + '" style="position: absolute; ' + lg_pos + ' display: none; width: ' + lg_size[0] + 'px, height: ' + lg_size[1] + 'px; z-index: 100001">');
+            document.write('<div id="' + o['large_ad_wrap_id'] + '" style="position: absolute; ' + lg_pos + ' display: none; z-index: 100001">');
             document.write(get_template(flash_object_code, {
                 width: lg_size[0],
                 height: lg_size[1],
