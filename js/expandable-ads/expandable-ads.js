@@ -1,7 +1,7 @@
 /*!
  * Expandable Ads
  *
- * Version: v0.1.3
+ * Version: v0.1.4
  * Author: Brent O'Connor (www.epicserve.com)
  * Requirements: jQuery v1.7.2 or greater
  *
@@ -63,7 +63,7 @@ var expandable_ad = function($) {
 
     return {
 
-        version: 'v0.1.3',
+        version: 'v0.1.4',
         public_property: null,
         mouse_is_over_sm_ad: false,
         mouse_is_over_lg_ad: false,
@@ -133,28 +133,31 @@ var expandable_ad = function($) {
                 o['large_ad_swf_url'] = o['large_ad_swf_url'] + '&clickTAG=' + escape(o['click_thru_url']);
             }
 
-            // output the small ad
-            document.write('<div id="' + o['small_ad_wrap_id'] + '" style="width: ' + sm_size[0] + 'px, height: ' + sm_size[1] + 'px;">');
-            document.write(get_template(flash_object_code, {
+            // generate the small ad
+            html  = '<div id="' + o['small_ad_wrap_id'] + '" style="width: ' + sm_size[0] + 'px, height: ' + sm_size[1] + 'px;">';
+            html += get_template(flash_object_code, {
                 width: sm_size[0],
                 height: sm_size[1],
                 id: o['small_ad_id'],
                 swf_url: o['small_ad_swf_url']
-            }));
-            document.write('</div>');
+            });
+            html  += '</div>';
 
-            // output the large ad
+            // generate the large ad
             if (o['expand_effect'] === 'slideLeft')  {
                 lg_pos = 'top: 0px; right: 0px;';
             }
-            document.write('<div id="' + o['large_ad_wrap_id'] + '" style="position: absolute; ' + lg_pos + ' display: none; z-index: 100001">');
-            document.write(get_template(flash_object_code, {
+            html  += '<div id="' + o['large_ad_wrap_id'] + '" style="position: absolute; ' + lg_pos + ' display: none; z-index: 100001">';
+            html += get_template(flash_object_code, {
                 width: lg_size[0],
                 height: lg_size[1],
                 id: o['large_ad_id'],
                 swf_url: o['large_ad_swf_url']
-            }));
-            document.write('</div>');
+            });
+            html  += '</div>';
+
+            // output the small and large ads wrapped in a container div
+            document.write('<div id="' + o['ad_id_slug'] + '-wrap" style="position: relative; width: ' + sm_size[0] + 'px; height: ' + sm_size[1] + 'px;">' + html + '</div>');
 
             // add ad hover effects / behaviors
             $('#' + o['small_ad_wrap_id']).hover(
